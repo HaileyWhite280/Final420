@@ -16,6 +16,9 @@ public class RollerPlayer : MonoBehaviour, IDestructable
     // Start is called before the first frame update
     void Start()
     {
+        float health = GetComponent<Health>().health;
+        Game.Instance.gameData.Load("Health", ref health);
+
         rb = GetComponent<Rigidbody>();
     }
 
@@ -42,8 +45,7 @@ public class RollerPlayer : MonoBehaviour, IDestructable
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
 
-        RollerGameManager.Instance.playerHealth = GetComponent<Health>().health;
-
+        Game.Instance.gameData.Save("Health", GetComponent<Health>().health);
     }
 
     //if consistently applied goes here
@@ -56,6 +58,6 @@ public class RollerPlayer : MonoBehaviour, IDestructable
 
     public void Destroyed()
     {
-        RollerGameManager.Instance.OnPlayerDeath();
+        Game.Instance.OnPlayerDead();
     }
 }

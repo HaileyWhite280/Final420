@@ -15,9 +15,17 @@ MonoBehaviour:
   boolData:
     values: []
   intData:
-    values: []
+    values:
+    - key: Lives
+      value: 3
+    - key: EnemyLives
+      value: 3
   floatData:
-    values: []
+    values:
+    - key: Health
+      value: 100
+    - key: EnemyHealth
+      value: 100
   stringData:
     values: []
   vector3Data:

@@ -13,7 +13,8 @@ public class Game : Singleton<Game>
 		PLAYER_START,
 		GAME,
 		PLAYER_DEAD,
-		GAME_OVER
+		GAME_OVER,
+		GAME_WON
 	}
 
 	[SerializeField] ScreenFade screenFade;
@@ -57,6 +58,8 @@ public class Game : Singleton<Game>
 				break;
 			case State.GAME_OVER:
 				break;
+			case State.GAME_WON:
+				break;
 			default:
 				break;
 		}
@@ -74,6 +77,8 @@ public class Game : Singleton<Game>
 		if (gameData.intData["Lives"] == 0)
 		{
 			onLoadScene("Main Menu");
+			//Mak so it goes to game end screen then reset button
+			//goes to Main Menu
 		}
 		else
 		{
@@ -82,6 +87,16 @@ public class Game : Singleton<Game>
 		}
 
 	}
+
+	public void OnEnemyDead()
+    {
+		gameData.intData["EnemyLives"]--;
+
+		if(gameData.intData["EnemyLives"] == 0)
+        {
+			onLoadScene("Game Won!");
+        }
+    }
 
 	public void OnSceneWasLoaded(Scene current, Scene next)
 	{

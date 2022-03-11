@@ -298,7 +298,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2855964333592614789}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -772,8 +772,8 @@ GameObject:
   - component: {fileID: 7207792384611398027}
   - component: {fileID: 7207792384611398024}
   - component: {fileID: 7207792384611398025}
-  - component: {fileID: 517867101673032209}
   - component: {fileID: 1212566133995265898}
+  - component: {fileID: 517867101673032209}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -809,7 +809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89b6cbdde1cfcb74f90cf48b3503046a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxForce: 5
+  maxForce: 15
   jumpForce: 5
   forceMode: 0
   viewTransform: {fileID: 391878389701944430}
@@ -905,6 +905,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1212566133995265898
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7207792384611398030}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
 --- !u!96 &517867101673032209
 TrailRenderer:
   serializedVersion: 2
@@ -1012,22 +1028,6 @@ TrailRenderer:
   m_MinVertexDistance: 0.5
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!54 &1212566133995265898
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7207792384611398030}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 2
 --- !u!1 &8137791378525977934
 GameObject:
   m_ObjectHideFlags: 0

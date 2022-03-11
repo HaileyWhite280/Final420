@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97970ab317d7a8b4aa667e90de351057, type: 3}
-  m_Name: RollerMovementData
+  m_Name: SearchMovementData
   m_EditorClassIdentifier: 
-  maxSpeed: 8
-  minSpeed: 2
+  maxSpeed: 12
+  minSpeed: 6
   maxForce: 8
   turnRate: 360
   orientToMovement: 1

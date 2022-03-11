@@ -9,6 +9,7 @@ public class RollerPlayer : MonoBehaviour, IDestructable
     [SerializeField] float jumpForce = 5;
     [SerializeField] ForceMode forceMode;
     [SerializeField] Transform viewTransform;
+    float sprintForce = 2;
 
     Rigidbody rb;
     Vector3 force = Vector3.zero;
@@ -43,7 +44,10 @@ public class RollerPlayer : MonoBehaviour, IDestructable
         if (Input.GetButtonDown("Jump"))
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            //set IsGrounded() ???
         }
+
+        //sprinting???
 
         Game.Instance.gameData.Save("Health", GetComponent<Health>().health);
     }
